@@ -6,11 +6,13 @@ class Main {
 
     Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Enter the number you want to check:");
-    int checkNum = scanner.nextInt();
+    // System.out.print("Enter the number you want to check:");
+    // int checkNum = scanner.nextInt();
 
-    factorial(checkNum);
-    pailnDrome(checkNum);
+    // factorial(checkNum);
+    // pailnDrome(checkNum);
+    // pascal(5);
+    fibonaccci(5);
   }
 
   public static void factorial(int num) {
@@ -40,6 +42,34 @@ class Main {
       System.out.println("The Number is Pailndrom");
     } else {
       System.out.println("Not Pailndrome");
+    }
+  }
+
+  public static void pascal(int n) {
+
+    for (int i = 1; i <= n; i++) {
+      for (int j = i; j <= n; j++) {
+        System.out.print(" ");
+      }
+      for (int k = 1; k <= i; k++) {
+        System.out.print(k + " ");
+      }
+      System.out.println();
+    }
+  }
+
+  public static void fibonaccci(int n) {
+
+    int sum = 0;
+    int prev = 0;
+
+    for (int i = 0; i <= n; i++) {
+
+      sum = i + prev;
+      System.out.print(sum + " ");
+      prev = i;
+      ;
+
     }
   }
 }
