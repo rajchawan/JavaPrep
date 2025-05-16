@@ -12,7 +12,8 @@ class Main {
     // factorial(checkNum);
     // pailnDrome(checkNum);
     // pascal(5);
-    fibonaccci(5);
+    // fibonaccci(5);
+    reverseString("VIRAJ");
   }
 
   public static void factorial(int num) {
@@ -70,6 +71,18 @@ class Main {
       prev = i;
       ;
 
+    }
+  }
+
+  public static void reverseString(String str) {
+    String revStr = "";
+    if (str != null) {
+      for (int i = str.length() - 1; i >= 0; i--) {
+        revStr = revStr + str.charAt(i);
+      }
+      System.out.println(revStr);
+    } else {
+      System.out.println("Null is not valid input");
     }
   }
 }
