@@ -12,8 +12,11 @@ class Main {
     // factorial(checkNum);
     // pailnDrome(checkNum);
     // pascal(5);
-    // fibonaccci(5);
-    reverseString("VIRAJ");
+    fibonaccci(10);
+    // reverseString("VIRAJ");
+    // swapNumbers(1, 2);
+    // checkVowel("RAJ");
+
   }
 
   public static void factorial(int num) {
@@ -59,18 +62,22 @@ class Main {
     }
   }
 
-  public static void fibonaccci(int n) {
+  public static void fibonaccci(int count) {
 
-    int sum = 0;
-    int prev = 0;
+    int a = 0;
+    int b = 1;
+    int c = 1;
 
-    for (int i = 0; i <= n; i++) {
+    for (int i = 0; i <= count - 1; i++) {
 
-      sum = i + prev;
-      System.out.print(sum + " ");
-      prev = i;
-      ;
-
+      if (i == count - 1) {
+        System.out.print(a + ".");
+      } else {
+        System.out.print(a + ", ");
+      }
+      a = b;
+      b = c;
+      c = a + b;
     }
   }
 
@@ -84,5 +91,18 @@ class Main {
     } else {
       System.out.println("Null is not valid input");
     }
+  }
+
+  public static void swapNumbers(int n1, int n2) {
+    System.out.print("Before Swap N1 = " + n1 + ", N2=" + n2);
+    n2 = n2 + n1;
+    n1 = n2 - n1;
+    n2 = n2 - n1;
+    System.out.print(" & After Swap N1 = " + n1 + ", N2=" + n2);
+  }
+
+  public static void checkVowel(String str) {
+    String regex = ".*[aeiou].";
+    System.out.println("Vowel Present :" + str.toLowerCase().matches(regex));
   }
 }
