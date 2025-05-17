@@ -19,8 +19,12 @@ class Main {
     // reverseString("VIRAJ");
     // swapNumbers(1, 2);
     // checkVowel("RAJ");
-    List<Integer> numList = new ArrayList<>(List.of(2, 3, 5));
-    System.out.println(checkOddNumsInList(numList));
+    // List<Integer> numList = new ArrayList<>(List.of(2, 3, 5));
+    // System.out.println(checkOddNumsInList(numList));
+
+    Person myObj = new Person();
+    myObj.setDetails("Raj", 24);
+    myObj.getDetails();
 
   }
 
