@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Main {
 
@@ -12,11 +15,22 @@ class Main {
     // factorial(checkNum);
     // pailnDrome(checkNum);
     // pascal(5);
-    fibonaccci(10);
+    // fibonaccci(10);
     // reverseString("VIRAJ");
     // swapNumbers(1, 2);
     // checkVowel("RAJ");
+    List<Integer> numList = new ArrayList<>(List.of(2, 3, 5));
+    System.out.println(checkOddNumsInList(numList));
 
+  }
+
+  public static boolean checkOddNumsInList(List<Integer> list) {
+    for (int i : list) {
+      if (i % 2 == 0) {
+        return false;
+      }
+    }
+    return true;
   }
 
   public static void factorial(int num) {
