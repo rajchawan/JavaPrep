@@ -30,11 +30,18 @@ public class Car extends Vehicle {
     System.out.println("Model Type : " + car.modelType);
   }
 
+  // compile-time polymorphism
+
+  public static void greet() {
+    System.out.println("Greetings from Derived Class");
+  }
+
   public static void main(String[] args) {
 
     Car myCar = new Car();
 
     myCar.addDetails(myCar);
     myCar.getCarDetails(myCar);
+    myCar.greet();
   }
 }
