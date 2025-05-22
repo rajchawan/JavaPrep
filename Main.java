@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.lang.Math;
 
 class Main {
 
@@ -22,10 +23,28 @@ class Main {
     // List<Integer> numList = new ArrayList<>(List.of(2, 3, 5));
     // System.out.println(checkOddNumsInList(numList));
 
-    Person myObj = new Person();
-    myObj.setDetails("Raj", 24);
-    myObj.getDetails();
+    // Person myObj = new Person();
+    // myObj.setDetails("Raj", 24);
+    // myObj.getDetails();
+    armStrongNumber(153);
 
+  }
+
+  public static void armStrongNumber(int num) {
+    String str = String.valueOf(num);
+    int sum = 0;
+    int ogNum = num;
+
+    while (num != 0) {
+      int a = num % 10;
+      sum += Math.pow(a, str.length());
+      num = num / 10;
+    }
+    if (ogNum == sum) {
+      System.out.println(sum + " Is an Arstrong Number");
+    } else {
+      System.out.println(ogNum + " Is not an Armstrong Number");
+    }
   }
 
   public static boolean checkOddNumsInList(List<Integer> list) {
