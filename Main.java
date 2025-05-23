@@ -26,8 +26,22 @@ class Main {
     // Person myObj = new Person();
     // myObj.setDetails("Raj", 24);
     // myObj.getDetails();
-    armStrongNumber(153);
+    // armStrongNumber(153);
+    anagramString("listtten", "silenttt");
+  }
 
+  public static void anagramString(String str1, String str2) {
+    char charArray1[] = str1.toCharArray();
+    char charArray2[] = str2.toCharArray();
+
+    Arrays.sort(charArray1);
+    Arrays.sort(charArray2);
+
+    if (Arrays.equals(charArray1, charArray2)) {
+      System.out.println("Both the strings are Anagram Strings");
+    } else {
+      System.out.println("Strings are not anagrams");
+    }
   }
 
   public static void armStrongNumber(int num) {
