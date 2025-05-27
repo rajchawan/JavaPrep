@@ -27,7 +27,50 @@ class Main {
     // myObj.setDetails("Raj", 24);
     // myObj.getDetails();
     // armStrongNumber(153);
-    anagramString("listtten", "silenttt");
+    // anagramString("listtten", "silenttt");
+    int[] array = { 1, 2, 3 };
+    // sortArray(array);
+    sumSubarray(array);
+  }
+
+  public static void subarray(int[] array) {
+    for (int i = 0; i < array.length; i++) {
+      for (int j = i; j < array.length; j++) {
+        for (int k = i; k <= j; k++) {
+          System.out.print(array[k] + " ");
+        }
+        System.out.println();
+      }
+    }
+  }
+
+  public static void sumSubarray(int[] array) {
+    int sum = 0;
+    for (int i = 0; i < array.length; i++) {
+      for (int j = i; j < array.length; j++) {
+        for (int k = i; k <= j; k++) {
+          // System.out.print(array[k] + " ");
+          sum += array[k];
+        }
+      }
+    }
+    System.out.println("Sum : " + sum);
+  }
+
+  public static void sortArray(int[] array) {
+    for (int i = 0; i < array.length; i++) {
+      for (int j = i + 1; j < array.length; j++) {
+        if (array[i] > array[j]) {
+          int temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+      }
+    }
+
+    for (int i : array) {
+      System.out.print(i + " ");
+    }
   }
 
   public static void anagramString(String str1, String str2) {
