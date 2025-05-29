@@ -1,8 +1,10 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.lang.Math;
+import java.util.*;
 
 class Main {
 
@@ -28,9 +30,32 @@ class Main {
     // myObj.getDetails();
     // armStrongNumber(153);
     // anagramString("listtten", "silenttt");
-    int[] array = { 1, 2, 3 };
+    // int[] array = { 1, 2, 3 };
     // sortArray(array);
-    sumSubarray(array);
+    // sumSubarray(array);
+    characterOccurences("ABCABHDA");
+  }
+
+  public static void characterOccurences(String str) {
+    int count = 0;
+    Set<Character> seen = new HashSet<>();
+    for (int i = 0; i < str.length(); i++) {
+      count = 1;
+      char currChar = str.charAt(i);
+
+      if (seen.contains(currChar)) {
+        continue;
+      }
+
+      for (int j = i + 1; j < str.length(); j++) {
+        if (str.charAt(i) == str.charAt(j)) {
+          count++;
+        }
+      }
+
+      seen.add(currChar);
+      System.out.println(str.charAt(i) + " has " + count + " occurences!");
+    }
   }
 
   public static void subarray(int[] array) {
