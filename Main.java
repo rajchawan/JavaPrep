@@ -74,7 +74,6 @@ class Main {
     for (int i = 0; i < array.length; i++) {
       for (int j = i; j < array.length; j++) {
         for (int k = i; k <= j; k++) {
-          // System.out.print(array[k] + " ");
           sum += array[k];
         }
       }
