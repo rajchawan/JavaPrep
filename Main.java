@@ -36,6 +36,8 @@ class Main {
     characterOccurences("ABCABHDA");
   }
 
+  
+
   public static void characterOccurences(String str) {
     int count = 0;
     Set<Character> seen = new HashSet<>();
