@@ -54,7 +54,7 @@ class Main {
       }
 
       seen.add(currChar);
-      System.out.println(str.charAt(i) + " has " + count + " occurences!");
+      System.out.println(str.charAt(i) + " has " + count + " Occurences!");
     }
   }
 
